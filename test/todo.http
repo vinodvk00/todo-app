@@ -1,0 +1,25 @@
+### Get all todos
+GET http://localhost:3000/todos
+
+### Get a specific todo by ID
+GET http://localhost:3000/todos/1
+
+### Create a new todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "title": "Learn NestJS"
+}
+
+### Update a todo
+PUT http://localhost:3000/todos/1
+Content-Type: application/json
+
+{
+    "title": "Learn NestJS Advanced",
+    "isCompleted": true
+}
+
+### Delete a todo
+DELETE http://localhost:3000/todos/1
