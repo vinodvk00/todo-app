@@ -5,9 +5,9 @@ import { UpdateTodoDto } from './dto/update-todo.dto';
 
 /**
  * TodoService - Handles the business logic for todo operations
- * 
- * This service implements CRUD operations for todo items using in-memory storage.
- * In a real application, this would typically interact with a database.
+ *
+ * This service implements CRUD operations for todo items using in-memory storage. In a real
+ * application, this would typically interact with a database.
  */
 @Injectable()
 export class TodoService {
@@ -17,7 +17,9 @@ export class TodoService {
 
   /**
    * Creates a new todo item
+   *
    * @param createTodoDto - The DTO containing the todo item data
+   *
    * @returns The created todo item
    */
   create(createTodoDto: CreateTodoDto): Todo {
@@ -34,6 +36,7 @@ export class TodoService {
 
   /**
    * Retrieves all todo items
+   *
    * @returns Array of all todo items
    */
   findAll(): Todo[] {
@@ -42,7 +45,9 @@ export class TodoService {
 
   /**
    * Retrieves a specific todo item by ID
+   *
    * @param id - The ID of the todo item to find
+   *
    * @returns The found todo item or undefined
    */
   findOne(id: number): Todo | undefined {
@@ -51,8 +56,10 @@ export class TodoService {
 
   /**
    * Updates a todo item
+   *
    * @param id - The ID of the todo item to update
    * @param updateTodoDto - The DTO containing the update data
+   *
    * @returns The updated todo item or undefined if not found
    */
   update(id: number, updateTodoDto: UpdateTodoDto): Todo | undefined {
@@ -65,7 +72,9 @@ export class TodoService {
 
   /**
    * Removes a todo item
+   *
    * @param id - The ID of the todo item to remove
+   *
    * @returns True if the item was removed, false otherwise
    */
   remove(id: number): boolean {

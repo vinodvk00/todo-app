@@ -5,16 +5,15 @@ import { UpdateTodoDto } from './dto/update-todo.dto';
 
 /**
  * TodoController - Handles HTTP requests for todo operations
- * 
- * This controller demonstrates NestJS decorators and routing.
- * Each method corresponds to an HTTP endpoint and uses dependency injection
- * to access the TodoService.
+ *
+ * This controller demonstrates NestJS decorators and routing. Each method corresponds to an HTTP
+ * endpoint and uses dependency injection to access the TodoService.
  */
 @Controller('todos')
 export class TodoController {
   /**
-   * Constructor - demonstrates dependency injection in NestJS
-   * NestJS will automatically instantiate and inject the TodoService
+   * Constructor - demonstrates dependency injection in NestJS NestJS will automatically instantiate
+   * and inject the TodoService
    */
   constructor(private readonly todoService: TodoService) {}
 
@@ -42,6 +41,7 @@ export class TodoController {
 
   /**
    * @Post decorator defines a route for HTTP POST requests
+   *
    * @Body decorator extracts the request body and validates it against CreateTodoDto
    */
   @Post()
@@ -62,9 +62,7 @@ export class TodoController {
     return todo;
   }
 
-  /**
-   * @Delete decorator defines a route for HTTP DELETE requests
-   */
+  /** @Delete decorator defines a route for HTTP DELETE requests */
   @Delete(':id')
   remove(@Param('id') id: string) {
     const isRemoved = this.todoService.remove(+id);

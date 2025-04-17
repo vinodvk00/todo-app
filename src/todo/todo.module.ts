@@ -3,8 +3,9 @@ import { TodoController } from './todo.controller';
 import { TodoService } from './todo.service';
 
 /**
- * TodoModule - The feature module for todo functionality
- * This module demonstrates NestJS's modular architecture:
+ * TodoModule - The feature module for todo functionality This module demonstrates NestJS's modular
+ * architecture:
+ *
  * - Controllers handle HTTP requests and define routes
  * - Providers (services) implement business logic
  * - The @Module decorator configures how NestJS should assemble the module
